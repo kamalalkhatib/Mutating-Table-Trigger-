@@ -1,0 +1,24 @@
+-- This table contains all empolyees's job titles(the current and history)
+-- I created the required constraints in the bottom to achieve the required data integrity,
+-- But those constraints fail to achieve one of the main requiremnets which is not
+-- allowing date overlapping, and we can't achieve this requirment by using normal constraints.
+SQL> desc emp_job_title
+ Name					   Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ EMPID						    NUMBER(5)
+ POS_ID 					    NUMBER(4)
+ ST_DATE					    DATE
+ ED_DATE					    DATE
+
+SQL> alter table emp_job_title add constraint id_sdt_pk primary key(empid,st_date);
+Table altered.
+
+SQL> alter table emp_job_title add constraint id_edt_uk unique(empid,ed_date)
+Table altered.
+
+SQL> alter table emp_job_title add constraint sdt_edt_ck check(ed_date>st_date)
+Table altered.
+
+SQL> alter table emp_job_title modify pos_id not null
+Table altered.
+
