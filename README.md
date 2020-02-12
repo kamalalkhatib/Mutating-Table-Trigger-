@@ -1,4 +1,4 @@
-Mutating table description: contains description for the problem
+Mutating table error description: contains description for the problem
 Create Mutating table trigger description	5 minutes ago
 README.md	Update README.md	43 minutes ago
 compound trigger: constains the code that is used to prevent overlapping
