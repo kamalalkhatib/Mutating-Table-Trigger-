@@ -1,3 +1,4 @@
+-- This trigger used to prevent date overlapping
 CREATE OR REPLACE TRIGGER pos_stdate_trg
 	      FOR UPDATE OR INSERT ON pos_tst_trg
   	      COMPOUND TRIGGER
