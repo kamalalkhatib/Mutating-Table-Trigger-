@@ -1,3 +1,5 @@
+-- This package used as API to insert or update emp titles, we use select for update to serialize the operation
+-- on the table so we make sure in mutil user environment no more than one user can modify the same employee data.
 create or replace package ins_updt_pkg as
 procedure titl_ins_pro(p_empid emp_job_title.empid%type,
 p_pos_id emp_job_title.pos_id%type,p_st_dt date,p_ed_dt date default null);
