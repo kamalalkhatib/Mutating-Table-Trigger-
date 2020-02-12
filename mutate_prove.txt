@@ -1,11 +1,4 @@
-SQL> insert into pos_tst_trg(empid,pos_id,st_date) values(1,1,sysdate)
-  2  ;
-insert into pos_tst_trg(empid,pos_id,st_date) values(1,1,sysdate)
-            *
-ERROR at line 1:
-ORA-04091: table SCOTT.POS_TST_TRG is mutating, trigger/function may not see it
-ORA-06512: at "SCOTT.CHK_DATE_TRG", line 4
-ORA-04088: error during execution of trigger 'SCOTT.CHK_DATE_TRG'
+This trigger shows how mutating table trigger happens 
 
 CREATE OR REPLACE TRIGGER chk_date_trg
    AFTER INSERT OR UPDATE
@@ -26,3 +19,12 @@ where
 raise_application_error(-20001,'overlapping in date is not allowed');
    END IF;
 END chk_date_trg;
+
+SQL> insert into pos_tst_trg(empid,pos_id,st_date) values(1,1,sysdate)
+  2  ;
+insert into pos_tst_trg(empid,pos_id,st_date) values(1,1,sysdate)
+            *
+ERROR at line 1:
+ORA-04091: table SCOTT.POS_TST_TRG is mutating, trigger/function may not see it
+ORA-06512: at "SCOTT.CHK_DATE_TRG", line 4
+ORA-04088: error during execution of trigger 'SCOTT.CHK_DATE_TRG'
