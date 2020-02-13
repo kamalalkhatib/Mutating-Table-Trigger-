@@ -1,3 +1,9 @@
-Mutating table error happens when you define a trigger on a table and this trigger query or update the
-table while we are doing DML operation on this table. This considered a violation of data integrity and Oracle does not allow that,
-because the data will be unconsistent, the trigger will see the data partially updated
+Mutating table error happens when 
+you define a trigger on a table and 
+this trigger query or update the
+table while we are doing DML operation 
+on this table. This considered a violation of data 
+integrity and Oracle does not allow that,
+because the data will be unconsistent, 
+the trigger will see the data partially updated.
+And that not allowed in Oracle Database 
