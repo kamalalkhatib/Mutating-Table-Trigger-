@@ -1,5 +1,5 @@
 In this example I will show how the compound trigger solution has problem in muti-user environment:
-This example shows that two different users at the same time are trying to insert overlapping data for the same user 
+This example shows that two different users at the same time are trying to insert overlapped date for the same user 
 and both of them are succeded to insert overlapped data, because any user can't see other users modifications before
 they commit thier changes because in oracle writers don't block readers.
 select * from pos_tst_trg;
