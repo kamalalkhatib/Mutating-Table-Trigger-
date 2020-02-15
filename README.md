@@ -1,6 +1,6 @@
 This project shows the mutating table 
-Problem and the problem with compound trigger
-And I am describing one of those ways 
-That is used to solve this problem 
-Without having problems with data consistency
-I used an API to avoid this problem 
+Problem and the problem with using compound trigger 
+To solve this issue, And I am describing 
+How to use an API to solve this problem 
+Without violating data integrity
+
