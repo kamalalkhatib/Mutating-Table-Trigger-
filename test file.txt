@@ -4,3 +4,4 @@
 - Forth change
 - Fifth change
 - 6th change by the new Branch
+- 7th change by the new branch
